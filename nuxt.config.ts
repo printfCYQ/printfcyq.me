@@ -1,12 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    "@pinia/nuxt",
     "@vueuse/nuxt",
     "@unocss/nuxt",
     "@nuxt/content",
     "@vite-pwa/nuxt",
     "nuxt-icon",
   ],
+  imports: {
+    dirs: ["./stores"],
+  },
+  pinia: {
+    autoImports: ["defineStore", "acceptHMRUpdate"],
+  },
   app: {
     head: {
       charset: "utf-8",
