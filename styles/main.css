@@ -18,8 +18,3 @@ body::-webkit-scrollbar {
 ::selection {
   --at-apply: dark:badge-light dark:important-text-op-65 badge-warmgray;
 }
-
-.prose,
-[prose=""] {
-  max-width: 80ch !important;
-}

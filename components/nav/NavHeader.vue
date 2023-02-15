@@ -8,7 +8,7 @@ interface NavType {
 const routes = reactive<NavType[]>([
   { icon: 'carbon:cics-sit-overrides', path: '/posts' },
   { icon: 'carbon:delivery-parcel', path: '/projects' },
-  { icon: 'mingcute:notebook-2-fill', path: '/notes' },
+  // { icon: 'mingcute:notebook-2-fill', path: '/notes' },
 ])
 </script>
 

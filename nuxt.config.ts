@@ -8,6 +8,17 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
     "nuxt-icon",
   ],
+  content: {
+    highlight: {
+      theme: "vitesse-dark",
+    },
+    markdown: {
+      toc: {
+        depth: 3,
+      },
+    },
+    documentDriven: true,
+  },
   imports: {
     dirs: ["./stores"],
   },
@@ -40,7 +51,7 @@ export default defineNuxtConfig({
     preflight: true,
     icons: true, // enabled `@unocss/preset-icons`
   },
-  css: ["~/styles/main.css", "~/styles/dank-mono.css"],
+  css: ["~/styles/main.css", "~/styles/dank-mono.css", "~/styles/markdown.css"],
   pwa: {
     manifest: {
       name: "printf CYQ",
