@@ -9,11 +9,13 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.4.3",
+    "@pinia/nuxt": "^0.4.6",
     "@unocss/nuxt": "^0.49.4",
     "@vite-pwa/nuxt": "^0.0.5",
     "@vueuse/nuxt": "^9.12.0",
     "nuxt": "^3.2.0",
     "nuxt-icon": "^0.2.11",
+    "pinia": "^2.0.30",
     "sass": "^1.58.1"
   }
 }
