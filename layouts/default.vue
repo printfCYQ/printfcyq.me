@@ -5,5 +5,6 @@
       <slot />
     </main>
     <NavFooter />
+    <Plum />
   </div>
 </template>
