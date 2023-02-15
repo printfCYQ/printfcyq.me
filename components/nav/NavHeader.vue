@@ -16,10 +16,8 @@ const routes = reactive<NavType[]>([
   <div>
     <header fixed z-9999 top-0 inset-x-0 trans backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" fbc px-8>
       <NuxtLink to="/" title="Home">
-        <!-- <img v-show="isDark" h-6 src="/logo-light.svg" alt="logo"> -->
-        <!-- <img v-show="!isDark" h-6 src="/logo.svg" alt="logo"> -->
-        <img src="/favicon.ico" alt="" />
-        <div text-6xl material-symbols:123></div>
+        <img v-show="isDark" h-6 src="/logo-light.svg" alt="logo">
+        <img v-show="!isDark" h-6 src="/logo.svg" alt="logo">
       </NuxtLink>
       <nav w-full grid="~ cols-[auto_max-content]" h-16 md:h-18>
         <div></div>
@@ -27,7 +25,7 @@ const routes = reactive<NavType[]>([
           <NuxtLink v-for="route in routes" :key="route.path" :to="route.path"
             :title="route.path.slice(1, 2).toUpperCase() + route.path.slice(2).toLowerCase()">
             <span v-if="route.text" icon-text>{{ route.text }}</span>
-            <Icon :name="route.icon" />
+            <Icon icon-btn :name="route.icon" />
           </NuxtLink>
           <a title="Github" href="https://github.com/printfCYQ" target="_blank" icon-link>
             <Icon name="ri:github-line" />

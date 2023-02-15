@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <p>
         {{ str }}
         <span class="typewrite-line">|</span>
-    </div>
+    </p>
 </template>
 
 <script setup lang="ts">
@@ -10,6 +10,10 @@ const props = defineProps({
     word: {
         type: String,
         default: '早春不过一棵树'
+    },
+    step: {
+        type: Number,
+        default: 800
     }
 })
 const str = ref<string>('')
@@ -29,7 +33,7 @@ onMounted(async () => {
                 }
             }, 100)
         }
-    }, 800)
+    }, props.step)
 })
 
 onBeforeUnmount(() => {

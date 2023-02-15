@@ -21,7 +21,7 @@ useIntervalFn(() => {
   <ClientOnly>
     <div hidden lg:flex font-mono text-xs fcc gap-1>
       {{ weekMap.get(time.getDay()) }}, <time :datetime="time.toISOString()" :title="time.toISOString()">{{
-        time.toLocaleTimeString('en-US', { hour12: false })
+        time.toLocaleString('en-US', { hour12: false })
       }}</time>
       ·
       <Icon name="vscode-icons:file-type-nuxt" />

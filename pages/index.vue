@@ -9,15 +9,12 @@ const { data: userInfo } = await useFetch('/api/user')
 <template>
   <div prose font-mono ma origin>
     <div flex flex-col items-center md="gap-10 flex-row">
-      <div class="github-avatar" cursor-pointer><img :src="userInfo?.avatar_url" alt="Avatar" w-50 h-50 rounded-full>
-      </div>
+      <img :src="userInfo?.avatar_url" alt="Avatar" w-50 h-50 rounded-full>
       <div>
         <h2 fic justify-center md="justify-start">
           {{ userInfo?.name ?? userInfo?.login }}
         </h2>
-        <p text-lg text-center md="text-left">
-          {{ userInfo?.bio }}
-        </p>
+        <Typewrite text-lg text-center md="text-left" :word="userInfo?.bio" :step="500"></Typewrite>
         <div fic gap-4 justify-center flex-wrap md="justify-start">
           <div fic gap-2>
             <Icon class="text-xl" name="ic:round-work" />
@@ -48,12 +45,8 @@ const { data: userInfo } = await useFetch('/api/user')
             </span>
           </span>
         </div>
-        <p />
       </div>
     </div>
-    <!-- <div fcc my-20>
-      <Typewrite :word="userInfo?.bio"></Typewrite>
-    </div> -->
     <p mt-20>
       👋 Hi there, I’m printfCYQ
     </p>
