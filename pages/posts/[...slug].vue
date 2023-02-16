@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Posts | Chris',
+  title: 'Posts | CYQ',
 })
 </script>
 

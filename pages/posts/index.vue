@@ -2,9 +2,9 @@
 import { useTitle } from '@vueuse/core'
 import { Article } from '~/types'
 
-useTitle('Posts | Chris')
+useTitle('Posts | CYQ')
 useHead({
-  title: 'Posts | Chris',
+  title: 'Posts | CYQ',
   meta: [
     {
       hid: 'description',

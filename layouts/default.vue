@@ -6,5 +6,6 @@
     </main>
     <NavFooter />
     <Plum />
-  </div>
+    <Backtop animation="move" :right="40" :bottom="40" />
+</div>
 </template>
